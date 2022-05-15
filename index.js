@@ -1,1 +1,1 @@
-console.log('tag1')
+console.log('tag2')
