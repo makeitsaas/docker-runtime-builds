@@ -9,7 +9,7 @@ Code & sample apps (NodeJS only for the moment) to build and run apps containers
 ```bash
 docker run \
   -e GIT_USER="JohnDoe" \
-  -e GIT_TOKEN=ghp_ThisIsPersonalAccessTokenb \
+  -e GIT_TOKEN=ghp_ThisIsPersonalAccessToken \
   -e REPO_URL="https://github.com/makeitsaas/docker-runtime-builds" \
   -e GIT_TAG=v0.0.3 \
   -it node:18-alpine \
