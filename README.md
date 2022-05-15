@@ -6,7 +6,6 @@ Code & sample apps (NodeJS only for the moment) to build and run apps containers
 
 ## Example
 
-```
 ```bash
 docker run \
   -e GIT_USER="JohnDoe" \
