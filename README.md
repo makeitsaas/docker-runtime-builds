@@ -14,7 +14,7 @@ docker run \
   -e GIT_TOKEN=ghp_ThisIsPersonalAccessToken \
   -e REPO_URL="https://github.com/makeitsaas/docker-runtime-builds" \
   -e APP_DIR="./node" \
-  -e GIT_TAG=v0.0.5 \
+  -e GIT_TAG=v0.0.6 \
   -it node:18-alpine \
   sh -c "wget -O - https://raw.githubusercontent.com/makeitsaas/docker-runtime-builds/main/init-node.sh | sh"
 ```
