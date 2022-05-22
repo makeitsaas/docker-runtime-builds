@@ -17,6 +17,13 @@ docker run \
   -e GIT_TAG=v0.0.6 \
   -it node:18-alpine \
   sh -c "wget -O - https://raw.githubusercontent.com/makeitsaas/docker-runtime-builds/main/init-node.sh | sh"
+
+# OR
+
+docker run \
+  --env-file .env \
+  -it node:18-alpine \
+  sh -c "wget -O - https://raw.githubusercontent.com/makeitsaas/docker-runtime-builds/main/init-node.sh | sh"
 ```
 
 #### Nginx
@@ -28,6 +35,14 @@ docker run \
   -e CONFS_DIR="./nginx/conf.d" \
   -e WWW_DIR="./nginx/html" \
   -e GIT_TAG=v0.0.4 \
+  -p 8080:80 \
+  -it nginx:stable \
+  sh -c "curl https://raw.githubusercontent.com/makeitsaas/docker-runtime-builds/main/init-nginx.sh | sh"
+
+# OR
+
+docker run \
+  --env-file .env \
   -p 8080:80 \
   -it nginx:stable \
   sh -c "curl https://raw.githubusercontent.com/makeitsaas/docker-runtime-builds/main/init-nginx.sh | sh"
