@@ -1,0 +1,16 @@
+version: "3.4"
+
+services:
+  nginx:
+    image: nginx:stable
+    command: sh -c "curl https://raw.githubusercontent.com/makeitsaas/docker-runtime-builds/main/init-nginx.sh | sh"
+    ports:
+      - "8080:80"
+    environment:
+      - GIT_USER=<change-me>
+      - GIT_TOKEN=<change-me>
+      - REPO_URL=https://github.com/makeitsaas/docker-runtime-builds.git
+      - APP_DIR=./node
+      - GIT_TAG=v0.0.6
+      - CONFS_DIR=./nginx/conf.d
+      - WWW_DIR=./nginx/html
