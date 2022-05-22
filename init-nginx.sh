@@ -5,4 +5,4 @@ git clone $REPO_URL repo
 cd repo
 if [ ! -z "$GIT_TAG" ]; then git checkout $GIT_TAG; fi
 cp ${CONFS_DIR:-./nginx/conf.d/}* /etc/nginx/conf.d || :
-cp -r ${WWW_DIR:-./nginx/conf.d/}* /usr/share/nginx/html || :
+cp -r ${WWW_DIR:-./nginx/html/}* /usr/share/nginx/html || :
