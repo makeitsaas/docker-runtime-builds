@@ -29,5 +29,5 @@ docker run \
   -e GIT_TAG=v0.0.6 \
   -p 8080:80 \
   -it nginx:stable \
-  sh -c "wget -O - https://raw.githubusercontent.com/makeitsaas/docker-runtime-builds/main/init-nginx.sh | sh"
+  sh -c "curl https://raw.githubusercontent.com/makeitsaas/docker-runtime-builds/main/init-nginx.sh | sh"
 ```
