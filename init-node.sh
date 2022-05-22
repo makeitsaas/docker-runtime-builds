@@ -4,5 +4,6 @@ cd /srv
 git clone $REPO_URL repo
 cd repo
 if [ ! -z "$GIT_TAG" ]; then git checkout $GIT_TAG; fi
+if [ ! -z "$APP_DIR" ]; then cd $APP_DIR fi
 yarn install
 yarn run start

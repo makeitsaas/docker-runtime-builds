@@ -13,7 +13,8 @@ docker run \
   -e GIT_USER="JohnDoe" \
   -e GIT_TOKEN=ghp_ThisIsPersonalAccessToken \
   -e REPO_URL="https://github.com/makeitsaas/docker-runtime-builds" \
-  -e GIT_TAG=v0.0.3 \
+  -e APP_DIR="./node" \
+  -e GIT_TAG=v0.0.5 \
   -it node:18-alpine \
   sh -c "wget -O - https://raw.githubusercontent.com/makeitsaas/docker-runtime-builds/main/init-node.sh | sh"
 ```
@@ -26,7 +27,7 @@ docker run \
   -e REPO_URL="https://github.com/makeitsaas/docker-runtime-builds" \
   -e CONFS_DIR="./nginx/conf.d" \
   -e WWW_DIR="./nginx/html" \
-  -e GIT_TAG=v0.0.6 \
+  -e GIT_TAG=v0.0.4 \
   -p 8080:80 \
   -it nginx:stable \
   sh -c "curl https://raw.githubusercontent.com/makeitsaas/docker-runtime-builds/main/init-nginx.sh | sh"
