@@ -25,7 +25,7 @@ docker run \
   -e GIT_TOKEN=ghp_ThisIsPersonalAccessToken \
   -e REPO_URL="https://github.com/makeitsaas/docker-runtime-builds" \
   -e CONFS_DIR="./nginx/conf.d" \
-  -e WWW_DIR="./nginx/www" \
+  -e WWW_DIR="./nginx/html" \
   -e GIT_TAG=v0.0.6 \
   -it nginx:stable \
   sh -c "wget -O - https://raw.githubusercontent.com/makeitsaas/docker-runtime-builds/main/init-nginx.sh | sh"
