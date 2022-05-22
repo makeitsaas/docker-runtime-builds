@@ -1,4 +1,4 @@
-apt update && apt install git
+apt update && apt install -y git
 git config --global credential.helper "!f() { echo 'username=$GIT_USER'; echo 'password=$GIT_TOKEN'; };f"
 cd /srv
 git clone $REPO_URL repo
